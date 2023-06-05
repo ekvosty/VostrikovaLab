@@ -41,7 +41,7 @@ namespace VostrikovaLab
                 }
                 catch (Exception ex)
                 {
-                    throw new FileLoadException($"Cannot load data from file {FileName}:\r\n{ex.Message}");
+                    throw new FileLoadException($"Не получилось загрузить файл {FileName}:\r\n{ex.Message}");
                 }
             }
         }
