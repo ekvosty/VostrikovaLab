@@ -8,7 +8,14 @@ namespace VostrikovaLab.Controllers
     [ApiController]
     public class BooksController : Controller
     {
-        private static IStorage<BookModel> _memCache = new MemCache();
+        private IStorage<BookModel> _memCache;
+
+        public BooksController(IStorage<BookModel> memCache)
+        {
+            _memCache = memCache;
+        }
+
+
         [HttpGet]
         public ActionResult<IEnumerable<BookModel>> Get()
         {

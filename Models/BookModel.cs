@@ -7,5 +7,10 @@
         public string Title { get; set; }
         public decimal Price { get; set; }
         public int PageCount { get; set; }
+
+        public override string ToString()
+        {
+            return Title.ToString() + " by " + Author;
+        }
     }
 }
